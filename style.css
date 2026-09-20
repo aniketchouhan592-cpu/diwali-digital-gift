@@ -1,0 +1,3423 @@
+/* =========================================
+   DIWALI DIGITAL GIFT
+   CSS - FOUNDATION + GIFT OPENING
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #080014;
+    font-family: Arial, sans-serif;
+}
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+.screen {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    overflow: hidden;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+/* =========================================
+   WELCOME SCREEN
+   ========================================= */
+
+#welcomeScreen {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #5d237f 0%,
+            #35105c 25%,
+            #17052d 60%,
+            #080014 100%
+        );
+
+    color: white;
+}
+
+
+/* =========================================
+   STARS
+   ========================================= */
+
+.stars {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, rgba(255,255,255,0.9) 1px, transparent 1px),
+        radial-gradient(circle, rgba(255,230,150,0.7) 1px, transparent 1px);
+
+    background-size: 70px 70px, 110px 110px;
+    background-position: 10px 20px, 40px 60px;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================
+   GIFT AREA
+   ========================================= */
+
+.gift-area {
+    position: relative;
+
+    width: 210px;
+    height: 210px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   GIFT GLOW
+   ========================================= */
+
+.gift-glow {
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 190, 60, 0.25);
+
+    filter: blur(25px);
+
+    animation: glowPulse 2s infinite ease-in-out;
+}
+
+@keyframes glowPulse {
+
+    0% {
+        transform: scale(0.85);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.85;
+    }
+
+    100% {
+        transform: scale(0.85);
+        opacity: 0.45;
+    }
+}
+
+
+/* =========================================
+   GIFT BOX
+   ========================================= */
+
+.gift-box {
+    position: relative;
+
+    width: 145px;
+    height: 125px;
+
+    z-index: 3;
+
+    cursor: pointer;
+
+    transform: translateY(10px);
+
+    filter: drop-shadow(0 15px 20px rgba(0,0,0,0.45));
+
+    animation: giftFloat 2.5s infinite ease-in-out;
+}
+
+@keyframes giftFloat {
+
+    0% {
+        transform: translateY(8px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(8px);
+    }
+}
+
+
+/* =========================================
+   GIFT BODY
+   ========================================= */
+
+.gift-body {
+    position: absolute;
+
+    left: 5px;
+    bottom: 0;
+
+    width: 135px;
+    height: 95px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4d72,
+            #d9164c
+        );
+
+    border: 2px solid rgba(255,255,255,0.2);
+
+    box-shadow:
+        inset 0 8px 12px rgba(255,255,255,0.15),
+        inset 0 -10px 15px rgba(0,0,0,0.2);
+}
+
+
+/* =========================================
+   GIFT LID
+   ========================================= */
+
+.gift-lid {
+    position: absolute;
+
+    top: 12px;
+    left: 0;
+
+    width: 145px;
+    height: 35px;
+
+    border-radius: 7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff6383,
+            #e51e55
+        );
+
+    z-index: 5;
+
+    box-shadow:
+        0 5px 8px rgba(0,0,0,0.25);
+}
+
+
+/* =========================================
+   RIBBON
+   ========================================= */
+
+.ribbon-vertical {
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+
+    width: 24px;
+    height: 100%;
+
+    transform: translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffd45a,
+            #fff0a0,
+            #ffd45a
+        );
+}
+
+.gift-body .ribbon-vertical {
+    height: 95px;
+}
+
+.ribbon-horizontal {
+    position: absolute;
+
+    left: 0;
+    top: 50%;
+
+    width: 100%;
+    height: 18px;
+
+    transform: translateY(-50%);
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffd45a,
+            #fff0a0,
+            #ffd45a
+        );
+}
+
+
+/* =========================================
+   TEXT
+   ========================================= */
+
+.gift-title {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 28px;
+
+    font-size: 23px;
+    text-align: center;
+
+    text-shadow:
+        0 0 10px rgba(255,220,120,0.8);
+}
+
+.gift-subtitle {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 10px;
+
+    font-size: 15px;
+
+    color: #eadcf7;
+}
+
+
+/* =========================================
+   BUTTON
+   ========================================= */
+
+#startButton {
+    position: relative;
+    z-index: 3;
+
+    margin-top: 25px;
+
+    border: none;
+    outline: none;
+
+    padding: 14px 30px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd75a,
+            #ff9f1c
+        );
+
+    color: #421100;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(255,170,40,0.35);
+
+    transition: transform 0.2s ease;
+}
+
+#startButton:active {
+    transform: scale(0.94);
+}
+
+
+/* =========================================
+   FIREWORKS FOUNDATION
+   ========================================= */
+
+#fireworksScreen {
+    background:
+        radial-gradient(
+            circle at 50% 100%,
+            #21124b 0%,
+            #0b0620 45%,
+            #020207 100%
+        );
+}
+
+#fireworksCanvas {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .gift-title {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .gift-subtitle {
+        font-size: 14px;
+    }
+
+    #startButton {
+        font-size: 16px;
+        padding: 13px 27px;
+    }
+
+}
+
+/* =========================================
+   FIREWORKS - PHASE 2
+   ========================================= */
+
+#fireworksScreen {
+    position: absolute;
+    background:
+        radial-gradient(
+            ellipse at bottom,
+            #171044 0%,
+            #08051c 48%,
+            #010107 100%
+        );
+}
+
+/* तारों का आकाश */
+#fireworksScreen::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1.5px),
+        radial-gradient(circle, #ffeaa7 1px, transparent 1.5px),
+        radial-gradient(circle, #b9d9ff 0.8px, transparent 1.2px);
+
+    background-size:
+        83px 97px,
+        137px 121px,
+        59px 73px;
+
+    background-position:
+        10px 20px,
+        40px 10px,
+        20px 50px;
+
+    opacity: 0.75;
+
+    animation: starTwinkle 3s infinite alternate;
+}
+
+@keyframes starTwinkle {
+    from {
+        opacity: 0.45;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+#fireworksCanvas {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 2;
+}
+
+/* =========================================
+   FIREWORKS PHASE 3
+   EXTRA EFFECTS
+   ========================================= */
+
+.firework-label {
+    position: absolute;
+    z-index: 5;
+
+    left: 50%;
+    top: 8%;
+
+    transform: translateX(-50%);
+
+    color: rgba(255, 240, 190, 0.9);
+
+    font-size: 14px;
+    letter-spacing: 2px;
+
+    text-shadow: 0 0 12px rgba(255, 210, 80, 0.8);
+
+    pointer-events: none;
+}
+
+#fireworksScreen::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 22%;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(30, 15, 60, 0.65),
+            transparent
+        );
+
+    pointer-events: none;
+}
+
+/* =========================================
+   FIREWORKS PHASE 3
+   ========================================= */
+
+.fireworks-title {
+    position: absolute;
+    z-index: 10;
+    
+    top: 7%;
+    left: 50%;
+    
+    transform: translateX(-50%);
+    
+    color: #fff4c2;
+    
+    font-size: 16px;
+    font-weight: bold;
+    
+    letter-spacing: 2px;
+    
+    text-shadow:
+        0 0 8px #ffd45a,
+        0 0 18px #ff9d00;
+    
+    white-space: nowrap;
+    
+    pointer-events: none;
+}
+
+/* =========================================
+   LAKSHMI DIWALI SCREEN
+   NEW DESIGN
+   ========================================= */
+
+#diyaScene {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            #71330b 0%,
+            #3a1607 35%,
+            #190903 68%,
+            #070201 100%
+        );
+
+    color: white;
+}
+
+#diyaScene.active {
+    display: flex;
+}
+
+
+/* =========================================
+   GOLDEN BACKGROUND LIGHT
+   ========================================= */
+
+.lakshmi-bg-glow {
+    position: absolute;
+
+    width: 80vw;
+    height: 80vw;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    top: 15%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,215,90,0.28),
+            rgba(255,145,20,0.12) 45%,
+            transparent 70%
+        );
+
+    filter: blur(5px);
+
+    animation:
+        lakshmiGlow 3s infinite alternate;
+}
+
+@keyframes lakshmiGlow {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0.65;
+    }
+
+    to {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+/* =========================================
+   TOP LIGHTS
+   ========================================= */
+
+.top-lights {
+    position: absolute;
+
+    top: 5%;
+    left: 0;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+
+    z-index: 20;
+
+    border-top:
+        2px solid rgba(255,205,80,0.6);
+
+    padding-top: 10px;
+}
+
+.top-lights span {
+
+    font-size: 18px;
+
+    color: #ffd34d;
+
+    text-shadow:
+        0 0 7px #ffd34d,
+        0 0 15px #ff9d00;
+
+    animation:
+        bulbGlow 1s infinite alternate;
+}
+
+.top-lights span:nth-child(even) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bulbGlow {
+
+    from {
+        opacity: 0.45;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.lakshmi-heading {
+    position: absolute;
+
+    top: 10%;
+
+    z-index: 25;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #ffe69a;
+
+    text-shadow:
+        0 0 8px #ffb300,
+        0 0 20px #ff8c00;
+}
+
+
+/* =========================================
+   LAKSHMI MAIN
+   ========================================= */
+
+.lakshmi-main {
+    position: absolute;
+
+    top: 17%;
+
+    width: 280px;
+    height: 330px;
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   HALO
+   ========================================= */
+
+.golden-halo {
+    position: absolute;
+
+    left: 50%;
+    top: 20px;
+
+    width: 190px;
+    height: 190px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    border:
+        5px solid #ffd45a;
+
+    box-shadow:
+        0 0 12px #ffd45a,
+        0 0 30px #ff9d00,
+        inset 0 0 20px rgba(255,210,70,0.6);
+
+    animation:
+        haloPulse 2.5s infinite alternate;
+}
+
+@keyframes haloPulse {
+
+    from {
+        box-shadow:
+            0 0 10px #ffd45a,
+            0 0 20px #ff9d00;
+    }
+
+    to {
+        box-shadow:
+            0 0 20px #fff0a0,
+            0 0 45px #ff9d00;
+    }
+}
+
+
+/* =========================================
+   CROWN
+   ========================================= */
+
+.lakshmi-crown {
+    position: absolute;
+
+    left: 50%;
+    top: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 8;
+
+    font-size: 62px;
+
+    color: #ffd34d;
+
+    text-shadow:
+        0 0 8px #fff0a0,
+        0 0 18px #ff9d00;
+}
+
+
+/* =========================================
+   FACE
+   ========================================= */
+
+.lakshmi-face {
+    position: absolute;
+
+    left: 50%;
+    top: 80px;
+
+    width: 75px;
+    height: 90px;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        48% 48% 45% 45%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffd6a0,
+            #e99b62
+        );
+
+    z-index: 9;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.35);
+}
+
+.bindi {
+    position: absolute;
+
+    top: 17px;
+    left: 50%;
+
+    width: 7px;
+    height: 7px;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #9e1420;
+}
+
+.eye {
+    position: absolute;
+
+    top: 35px;
+
+    width: 18px;
+    height: 8px;
+
+    border-bottom:
+        3px solid #35140b;
+
+    border-radius: 50%;
+}
+
+.left-eye {
+    left: 15px;
+}
+
+.right-eye {
+    right: 15px;
+}
+
+.nose {
+    position: absolute;
+
+    top: 45px;
+    left: 50%;
+
+    width: 5px;
+    height: 13px;
+
+    transform: translateX(-50%);
+
+    border-right:
+        2px solid rgba(110,50,20,0.5);
+}
+
+.smile {
+    position: absolute;
+
+    bottom: 20px;
+    left: 50%;
+
+    width: 23px;
+    height: 10px;
+
+    transform:
+        translateX(-50%);
+
+    border-bottom:
+        3px solid #9c2631;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   BODY
+   ========================================= */
+
+.lakshmi-body {
+    position: absolute;
+
+    left: 50%;
+    top: 155px;
+
+    width: 130px;
+    height: 120px;
+
+    transform: translateX(-50%);
+
+    border-radius:
+        45% 45% 20% 20%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3a229,
+            #b82328 55%,
+            #7e1420
+        );
+
+    z-index: 6;
+
+    box-shadow:
+        0 8px 15px rgba(0,0,0,0.45);
+}
+
+
+/* =========================================
+   NECKLACES
+   ========================================= */
+
+.necklace {
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border:
+        3px solid #ffd34d;
+
+    border-radius: 50%;
+}
+
+.necklace1 {
+    top: 5px;
+
+    width: 65px;
+    height: 30px;
+}
+
+.necklace2 {
+    top: 20px;
+
+    width: 80px;
+    height: 40px;
+}
+
+.necklace3 {
+    top: 40px;
+
+    width: 95px;
+    height: 55px;
+}
+
+
+/* =========================================
+   ARMS
+   ========================================= */
+
+.arm {
+    position: absolute;
+
+    width: 90px;
+    height: 17px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e99b62,
+            #ffd0a0
+        );
+
+    z-index: 5;
+}
+
+.arm-left-top {
+    left: 8px;
+    top: 145px;
+
+    transform: rotate(-32deg);
+}
+
+.arm-right-top {
+    right: 8px;
+    top: 145px;
+
+    transform: rotate(32deg);
+}
+
+.arm-left-bottom {
+    left: 5px;
+    top: 195px;
+
+    transform: rotate(18deg);
+}
+
+.arm-right-bottom {
+    right: 5px;
+    top: 195px;
+
+    transform: rotate(-18deg);
+}
+
+.lotus-hand,
+.blessing-hand,
+.money-pot {
+    position: absolute;
+
+    top: -27px;
+
+    font-size: 38px;
+
+    filter:
+        drop-shadow(
+            0 0 7px #ffd34d
+        );
+}
+
+.arm-left-top .lotus-hand {
+    left: -10px;
+}
+
+.arm-right-top .lotus-hand {
+    right: -10px;
+}
+
+.arm-left-bottom .blessing-hand {
+    left: -12px;
+}
+
+.arm-right-bottom .money-pot {
+    right: -10px;
+}
+
+
+/* =========================================
+   BIG LOTUS
+   ========================================= */
+
+.big-lotus {
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    transform:
+        translateX(-50%);
+
+    font-size: 105px;
+
+    z-index: 3;
+
+    filter:
+        drop-shadow(
+            0 0 12px #ff7ca8
+        );
+}
+
+
+/* =========================================
+   FALLING COINS
+   ========================================= */
+
+.falling-coins {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 15;
+
+    pointer-events: none;
+}
+
+.falling-coins span {
+    position: absolute;
+
+    font-size: 18px;
+
+    animation:
+        coinFall
+        3s
+        infinite
+        linear;
+}
+
+.falling-coins span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.falling-coins span:nth-child(2) {
+    left: 18%;
+    animation-delay: 0.8s;
+}
+
+.falling-coins span:nth-child(3) {
+    left: 30%;
+    animation-delay: 1.5s;
+}
+
+.falling-coins span:nth-child(4) {
+    left: 45%;
+    animation-delay: 0.4s;
+}
+
+.falling-coins span:nth-child(5) {
+    left: 58%;
+    animation-delay: 1.1s;
+}
+
+.falling-coins span:nth-child(6) {
+    left: 70%;
+    animation-delay: 0.2s;
+}
+
+.falling-coins span:nth-child(7) {
+    left: 82%;
+    animation-delay: 1.7s;
+}
+
+.falling-coins span:nth-child(8) {
+    left: 92%;
+    animation-delay: 0.6s;
+}
+
+@keyframes coinFall {
+
+    0% {
+        top: -10%;
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+
+    15% {
+        opacity: 1;
+    }
+
+    100% {
+        top: 95%;
+        opacity: 0;
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================================
+   WEALTH BOWLS
+   ========================================= */
+
+.wealth-bowls {
+    position: absolute;
+
+    bottom: 28%;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content:
+        space-around;
+
+    z-index: 18;
+}
+
+.wealth-bowl {
+    font-size: 38px;
+
+    text-align: center;
+
+    filter:
+        drop-shadow(
+            0 0 8px #ffd34d
+        );
+}
+
+.wealth-bowl small {
+    display: block;
+
+    margin-top: -15px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   GRAND RANGOLI
+   ========================================= */
+
+.grand-rangoli {
+    position: absolute;
+
+    bottom: 11%;
+
+    left: 50%;
+
+    width: 170px;
+    height: 100px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 16;
+}
+
+.rangoli-ring {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    border-radius: 50%;
+
+    border:
+        2px solid #ffd34d;
+
+    box-shadow:
+        0 0 8px #ff9d00;
+}
+
+.ring-one {
+    width: 165px;
+    height: 80px;
+}
+
+.ring-two {
+    width: 125px;
+    height: 60px;
+}
+
+.ring-three {
+    width: 85px;
+    height: 40px;
+}
+
+.rangoli-flower {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    font-size: 35px;
+}
+
+.rangoli-dots {
+    position: absolute;
+
+    left: 50%;
+    bottom: -5px;
+
+    transform:
+        translateX(-50%);
+
+    white-space: nowrap;
+
+    color: #ffd34d;
+
+    text-shadow:
+        0 0 8px #ff9d00;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   BOTTOM DIYAS
+   ========================================= */
+
+.bottom-diyas {
+    position: absolute;
+
+    bottom: 4%;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content:
+        space-evenly;
+
+    z-index: 25;
+}
+
+.bottom-diyas div {
+
+    font-size: 30px;
+
+    filter:
+        drop-shadow(
+            0 0 10px #ff9d00
+        );
+
+    animation:
+        diyaFlicker
+        0.8s
+        infinite
+        alternate;
+}
+
+.bottom-diyas div:nth-child(even) {
+    animation-delay: 0.3s;
+}
+
+
+/* =========================================
+   MESSAGE
+   ========================================= */
+
+.lakshmi-message {
+    position: absolute;
+
+    bottom: 1%;
+
+    z-index: 30;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 12px;
+
+    color: #ffe9ad;
+
+    text-shadow:
+        0 0 8px #ff9d00;
+}
+
+/* =========================================
+   REAL LAKSHMI PHOTO SCENE
+   ========================================= */
+
+/* पुराने cartoon Lakshmi elements छुपाएँ */
+
+.lakshmi-main {
+    display: none !important;
+}
+
+
+/* MAIN PHOTO AREA */
+
+.lakshmi-photo-scene {
+
+    position: absolute;
+
+    top: 18%;
+
+    left: 50%;
+
+    width: 88vw;
+    max-width: 390px;
+
+    height: 52vh;
+    max-height: 520px;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    z-index: 10;
+}
+
+
+/* PHOTO GLOW */
+
+.photo-glow {
+
+    position: absolute;
+
+    width: 92%;
+    height: 92%;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,210,80,0.55),
+            rgba(255,150,20,0.18) 50%,
+            transparent 75%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        photoGlow 3s infinite alternate;
+
+    z-index: 0;
+}
+
+
+@keyframes photoGlow {
+
+    0% {
+
+        transform: scale(0.94);
+
+        opacity: 0.65;
+    }
+
+    100% {
+
+        transform: scale(1.05);
+
+        opacity: 1;
+    }
+}
+
+
+/* REAL LAKSHMI IMAGE */
+
+.lakshmi-photo {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    border-radius: 25px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 12px #ffd45a,
+        0 0 30px #ff9d00,
+        0 0 60px rgba(255,170,30,0.5);
+
+    animation:
+        lakshmiBreathing 5s
+        infinite
+        ease-in-out;
+
+}
+
+
+/* VERY SLOW NATURAL MOVEMENT */
+
+@keyframes lakshmiBreathing {
+
+    0% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.025);
+
+    }
+
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+}
+
+
+/* =========================================
+   GOLDEN SHIMMER
+   ========================================= */
+
+.golden-shimmer {
+
+    position: absolute;
+
+    top: -30%;
+
+    left: -80%;
+
+    width: 45%;
+
+    height: 160%;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,240,150,0.08),
+            rgba(255,240,150,0.55),
+            rgba(255,240,150,0.08),
+            transparent
+        );
+
+    transform:
+        rotate(18deg);
+
+    animation:
+        goldenSweep 5s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes goldenSweep {
+
+    0% {
+
+        left: -80%;
+
+        opacity: 0;
+    }
+
+    15% {
+
+        opacity: 1;
+    }
+
+    45% {
+
+        left: 130%;
+
+        opacity: 0.8;
+    }
+
+    100% {
+
+        left: 130%;
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   ANIMATED COINS
+   ========================================= */
+
+.animated-coins {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 8;
+
+    pointer-events: none;
+}
+
+
+.animated-coins span {
+
+    position: absolute;
+
+    top: -40px;
+
+    font-size: 18px;
+
+    filter:
+        drop-shadow(
+            0 0 6px #ffd34d
+        );
+
+    animation:
+        coinRain 4s
+        infinite
+        linear;
+}
+
+
+.animated-coins span:nth-child(1) {
+
+    left: 5%;
+
+    animation-delay: 0s;
+}
+
+.animated-coins span:nth-child(2) {
+
+    left: 15%;
+
+    animation-delay: 1.2s;
+}
+
+.animated-coins span:nth-child(3) {
+
+    left: 26%;
+
+    animation-delay: 2.4s;
+}
+
+.animated-coins span:nth-child(4) {
+
+    left: 37%;
+
+    animation-delay: 0.7s;
+}
+
+.animated-coins span:nth-child(5) {
+
+    left: 48%;
+
+    animation-delay: 1.8s;
+}
+
+.animated-coins span:nth-child(6) {
+
+    left: 59%;
+
+    animation-delay: 0.4s;
+}
+
+.animated-coins span:nth-child(7) {
+
+    left: 70%;
+
+    animation-delay: 2s;
+}
+
+.animated-coins span:nth-child(8) {
+
+    left: 80%;
+
+    animation-delay: 1s;
+}
+
+.animated-coins span:nth-child(9) {
+
+    left: 89%;
+
+    animation-delay: 2.8s;
+}
+
+.animated-coins span:nth-child(10) {
+
+    left: 95%;
+
+    animation-delay: 1.5s;
+}
+
+
+@keyframes coinRain {
+
+    0% {
+
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 1;
+    }
+
+    90% {
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(560px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   GOLD PARTICLES
+   ========================================= */
+
+.gold-particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 7;
+
+    pointer-events: none;
+}
+
+
+.gold-particles i {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffe58a;
+
+    box-shadow:
+        0 0 8px #ffd34d,
+        0 0 16px #ff9d00;
+
+    animation:
+        particleFloat 3s
+        infinite
+        ease-in-out;
+}
+
+
+.gold-particles i:nth-child(1) {
+
+    left: 12%;
+    top: 25%;
+}
+
+.gold-particles i:nth-child(2) {
+
+    left: 25%;
+    top: 65%;
+
+    animation-delay: 0.5s;
+}
+
+.gold-particles i:nth-child(3) {
+
+    left: 40%;
+    top: 18%;
+
+    animation-delay: 1s;
+}
+
+.gold-particles i:nth-child(4) {
+
+    left: 55%;
+    top: 70%;
+
+    animation-delay: 1.5s;
+}
+
+.gold-particles i:nth-child(5) {
+
+    left: 68%;
+    top: 30%;
+
+    animation-delay: 0.7s;
+}
+
+.gold-particles i:nth-child(6) {
+
+    left: 80%;
+    top: 55%;
+
+    animation-delay: 1.8s;
+}
+
+.gold-particles i:nth-child(7) {
+
+    left: 90%;
+    top: 20%;
+
+    animation-delay: 0.3s;
+}
+
+.gold-particles i:nth-child(8) {
+
+    left: 8%;
+    top: 75%;
+
+    animation-delay: 2s;
+}
+
+
+@keyframes particleFloat {
+
+    0% {
+
+        transform:
+            translateY(10px)
+            scale(0.5);
+
+        opacity: 0.2;
+    }
+
+    50% {
+
+        transform:
+            translateY(-15px)
+            scale(1.3);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(10px)
+            scale(0.5);
+
+        opacity: 0.2;
+    }
+}
+
+/* =========================================
+   NATURAL LAKSHMI ANIMATION
+   ========================================= */
+
+.lakshmi-photo {
+    transform-origin: center center;
+
+    animation:
+        lakshmiNaturalMotion 7s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes lakshmiNaturalMotion {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.018);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* फोटो पर बहुत हल्की रोशनी */
+
+.lakshmi-photo-scene::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 6;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at 50% 42%,
+            rgba(255,225,130,0.08),
+            transparent 55%
+        );
+
+    animation:
+        divineLight 4s
+        infinite
+        alternate;
+}
+
+
+@keyframes divineLight {
+
+    from {
+        opacity: 0.35;
+    }
+
+    to {
+        opacity: 0.9;
+    }
+}
+
+/* =========================================
+   GANESHA MITHAI SCREEN
+   ========================================= */
+
+#mithaiScene {
+    display: none;
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    align-items: center;
+    flex-direction: column;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #6b2410,
+            #2b0905 55%,
+            #090201 100%
+        );
+
+    color: white;
+}
+
+#mithaiScene.active {
+    display: flex;
+}
+
+
+/* Background */
+
+.mithai-bg {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,185,60,0.18),
+            transparent 60%
+        );
+
+    animation:
+        mithaiGlow 4s infinite alternate;
+}
+
+@keyframes mithaiGlow {
+
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Lights */
+
+.mithai-lights {
+    position: absolute;
+
+    top: 5%;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 10px #ffd34d;
+}
+
+
+/* Title */
+
+.mithai-title {
+    position: absolute;
+
+    top: 9%;
+
+    z-index: 20;
+
+    font-size: 21px;
+    font-weight: bold;
+
+    color: #ffe9a3;
+
+    text-shadow:
+        0 0 10px #ffb300,
+        0 0 20px #ff8c00;
+}
+
+
+/* Ganesha */
+
+.ganesha-image-box {
+
+    position: absolute;
+
+    top: 15%;
+
+    width: 92vw;
+    max-width: 410px;
+
+    height: 46vh;
+    max-height: 470px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    z-index: 5;
+}
+
+
+.ganesha-glow {
+
+    position: absolute;
+
+    inset: 5%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,210,80,0.55),
+            transparent 70%
+        );
+
+    filter: blur(18px);
+
+    animation:
+        ganeshaGlow 3s infinite alternate;
+}
+
+@keyframes ganeshaGlow {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+}
+
+
+.ganesha-photo {
+
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 15px #ffd45a,
+        0 0 35px #ff9d00;
+
+    animation:
+        ganeshaMotion 7s
+        infinite
+        ease-in-out;
+}
+
+
+@keyframes ganeshaMotion {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.018);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* Sparkles */
+
+.mithai-sparkles {
+
+    position: absolute;
+
+    bottom: 5%;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 8;
+
+    text-align: center;
+
+    color: #ffe28a;
+
+    text-shadow:
+        0 0 10px #ffb300;
+
+    animation:
+        sparkle 1.5s infinite alternate;
+}
+
+@keyframes sparkle {
+
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Sweet cards */
+
+.sweets-container {
+
+    position: absolute;
+
+    bottom: 12%;
+
+    width: 94%;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    gap: 5px;
+
+    z-index: 20;
+}
+
+
+.sweet-card {
+
+    width: 18%;
+
+    padding: 6px 2px;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    background:
+        rgba(100,35,10,0.75);
+
+    border:
+        1px solid rgba(255,210,100,0.5);
+
+    box-shadow:
+        0 0 10px rgba(255,170,30,0.35);
+
+    animation:
+        sweetFloat 2.5s infinite alternate;
+}
+
+
+.sweet-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.sweet-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.sweet-card:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+.sweet-card:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+
+@keyframes sweetFloat {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-6px);
+    }
+}
+
+
+.sweet-icon {
+    font-size: 25px;
+}
+
+.sweet-card span {
+    font-size: 10px;
+    color: #ffe6a0;
+}
+
+
+/* Bottom diyas */
+
+.mithai-bottom-diyas {
+
+    position: absolute;
+
+    bottom: 5%;
+
+    z-index: 25;
+
+    font-size: 25px;
+
+    text-shadow:
+        0 0 12px #ff9d00;
+
+    animation:
+        diyaGlow 1s infinite alternate;
+}
+
+@keyframes diyaGlow {
+
+    from {
+        opacity: 0.65;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Message */
+
+.mithai-message {
+
+    position: absolute;
+
+    bottom: 1%;
+
+    z-index: 30;
+
+    font-size: 11px;
+
+    color: #ffe7a0;
+
+    text-shadow:
+        0 0 8px #ff9d00;
+}
+
+/* =========================================
+   FINAL RAM SITA LAKSHMAN SCREEN
+   ========================================= */
+
+#finalScene {
+
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    flex-direction: column;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #7b350e 0%,
+            #421307 45%,
+            #150403 100%
+        );
+
+    color: white;
+
+}
+
+
+#finalScene.active {
+
+    display: flex;
+
+}
+
+
+/* Background light */
+
+.final-sky {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255,194,75,0.32),
+            transparent 58%
+        );
+
+    animation:
+        finalSkyGlow 5s
+        infinite
+        alternate;
+
+}
+
+
+@keyframes finalSkyGlow {
+
+    from {
+        opacity: 0.55;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* Top lights */
+
+.final-lights {
+
+    position: absolute;
+
+    top: 4%;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    z-index: 20;
+
+    text-shadow:
+        0 0 12px #ffd34d;
+
+}
+
+
+/* Title */
+
+.final-title {
+
+    position: absolute;
+
+    top: 9%;
+
+    z-index: 20;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    color: #ffe7a0;
+
+    text-shadow:
+        0 0 10px #ffbd32,
+        0 0 22px #ff8c00;
+
+}
+
+
+/* Main image */
+
+.ram-scene-box {
+
+    position: absolute;
+
+    top: 15%;
+
+    width: 92vw;
+
+    max-width: 410px;
+
+    height: 49vh;
+
+    max-height: 500px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    z-index: 5;
+
+}
+
+
+.ram-divine-glow {
+
+    position: absolute;
+
+    inset: 3%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,221,120,0.65),
+            transparent 70%
+        );
+
+    filter: blur(20px);
+
+    animation:
+        ramGlow 4s
+        infinite
+        alternate;
+
+}
+
+
+@keyframes ramGlow {
+
+    from {
+        transform: scale(0.9);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.08);
+        opacity: 1;
+    }
+
+}
+
+
+/* Ram-Sita-Lakshman photo */
+
+.ram-photo {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 0 18px #ffd45a,
+        0 0 40px rgba(255,170,30,0.75);
+
+    animation:
+        ramNaturalMotion 8s
+        infinite
+        ease-in-out;
+
+}
+
+
+@keyframes ramNaturalMotion {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.018);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* Floating particles */
+
+.final-particles {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 8;
+
+    pointer-events: none;
+
+}
+
+
+.final-particles i {
+
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: #ffe7a0;
+
+    box-shadow:
+        0 0 8px #ffd34d,
+        0 0 15px #ff9d00;
+
+    animation:
+        finalParticle 3s
+        infinite
+        ease-in-out;
+
+}
+
+
+.final-particles i:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.final-particles i:nth-child(2) {
+    left: 25%;
+    top: 65%;
+    animation-delay: .5s;
+}
+
+.final-particles i:nth-child(3) {
+    left: 40%;
+    top: 25%;
+    animation-delay: 1s;
+}
+
+.final-particles i:nth-child(4) {
+    left: 55%;
+    top: 70%;
+    animation-delay: 1.5s;
+}
+
+.final-particles i:nth-child(5) {
+    left: 70%;
+    top: 30%;
+    animation-delay: .7s;
+}
+
+.final-particles i:nth-child(6) {
+    left: 82%;
+    top: 60%;
+    animation-delay: 1.8s;
+}
+
+.final-particles i:nth-child(7) {
+    left: 90%;
+    top: 18%;
+    animation-delay: .3s;
+}
+
+.final-particles i:nth-child(8) {
+    left: 15%;
+    top: 80%;
+    animation-delay: 2s;
+}
+
+
+@keyframes finalParticle {
+
+    0% {
+        transform: translateY(10px) scale(.5);
+        opacity: .2;
+    }
+
+    50% {
+        transform: translateY(-15px) scale(1.3);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(10px) scale(.5);
+        opacity: .2;
+    }
+
+}
+
+
+/* Bottom diyas */
+
+.final-diyas {
+
+    position: absolute;
+
+    bottom: 13%;
+
+    z-index: 20;
+
+    font-size: 24px;
+
+    text-shadow:
+        0 0 12px #ff9d00;
+
+    animation:
+        finalDiyaGlow 1.2s
+        infinite
+        alternate;
+
+}
+
+
+@keyframes finalDiyaGlow {
+
+    from {
+        opacity: .65;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* Message */
+
+.final-message {
+
+    position: absolute;
+
+    bottom: 9%;
+
+    z-index: 20;
+
+    font-size: 12px;
+
+    color: #ffe7a0;
+
+    text-shadow:
+        0 0 8px #ff9d00;
+
+}
+
+
+/* =========================================
+   HAPPY DIWALI
+   ========================================= */
+
+.happy-diwali {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 30;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        rgba(20,3,0,0.88);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    animation:
+        finalMessageAppear 2s
+        ease
+        forwards;
+
+    animation-delay: 7s;
+
+}
+
+
+@keyframes finalMessageAppear {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+.happy-line {
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    color: #ffe69a;
+
+    text-shadow:
+        0 0 10px #ffd34d,
+        0 0 25px #ff9800,
+        0 0 45px #ff7600;
+
+    animation:
+        happyPulse 2s
+        infinite
+        alternate;
+
+}
+
+
+@keyframes happyPulse {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.06);
+    }
+
+}
+
+
+.hindi-line {
+
+    margin-top: 15px;
+
+    font-size: 24px;
+
+    color: #ffd66b;
+
+    text-shadow:
+        0 0 15px #ff9d00;
+
+}
+
+
+.blessing-line {
+
+    margin-top: 15px;
+
+    width: 85%;
+
+    font-size: 13px;
+
+    color: #fff0c2;
+
+}
+
+/* =========================================
+   FINAL DIWALI ROCKET SHOW
+   ========================================= */
+
+#diwaliRocketShow {
+    position: absolute;
+    inset: 0;
+    z-index: 50;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   ROCKETS
+   ========================================= */
+
+.final-rocket {
+    position: absolute;
+    bottom: -100px;
+
+    width: 8px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to top,
+            #ff7a00,
+            #fff4a3,
+            #ffffff
+        );
+
+    box-shadow:
+        0 0 10px #fff,
+        0 0 25px #ffd45a;
+
+    opacity: 0;
+}
+
+
+/* Rocket flame */
+
+.final-rocket span {
+
+    position: absolute;
+
+    width: 8px;
+    height: 30px;
+
+    left: 0;
+    bottom: -25px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff,
+            #ffd000,
+            transparent
+        );
+
+    filter: blur(2px);
+}
+
+
+/* LEFT ROCKET */
+
+.rocket-left {
+
+    left: 22%;
+
+    transform:
+        rotate(-12deg);
+}
+
+
+/* RIGHT ROCKET */
+
+.rocket-right {
+
+    right: 22%;
+
+    transform:
+        rotate(12deg);
+}
+
+
+/* =========================================
+   ROCKET MOVEMENT
+   ========================================= */
+
+.rockets-active .rocket-left {
+
+    opacity: 1;
+
+    animation:
+        rocketLeftMove
+        1.4s
+        ease-out
+        forwards;
+}
+
+
+.rockets-active .rocket-right {
+
+    opacity: 1;
+
+    animation:
+        rocketRightMove
+        1.4s
+        ease-out
+        forwards;
+}
+
+
+@keyframes rocketLeftMove {
+
+    0% {
+
+        bottom: -100px;
+        left: 22%;
+
+    }
+
+    100% {
+
+        bottom: 40%;
+        left: 48%;
+
+    }
+
+}
+
+
+@keyframes rocketRightMove {
+
+    0% {
+
+        bottom: -100px;
+        right: 22%;
+
+    }
+
+    100% {
+
+        bottom: 40%;
+        right: 48%;
+
+    }
+
+}
+
+
+/* =========================================
+   ROCKET EXPLOSION
+   ========================================= */
+
+.rocket-explode .final-rocket {
+
+    opacity: 0;
+
+    transform:
+        scale(2.5);
+
+    transition:
+        0.25s ease-out;
+}
+
+
+/* =========================================
+   SHUBH DIWALI TEXT
+   ========================================= */
+
+.final-diwali-text {
+
+    position: absolute;
+
+    top: 40%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%)
+        scale(0.1);
+
+    opacity: 0;
+
+    white-space: nowrap;
+
+    font-size:
+        clamp(42px, 9vw, 95px);
+
+    font-weight:
+        900;
+
+    font-family:
+        "Noto Serif Devanagari",
+        "Mangal",
+        serif;
+
+    color:
+        #fff8b0;
+
+    text-align: center;
+
+    text-shadow:
+
+        0 0 5px #ffffff,
+
+        0 0 15px #ffd700,
+
+        0 0 30px #ffb300,
+
+        0 0 55px #ff7a00,
+
+        0 0 90px #ff4500;
+}
+
+
+/* =========================================
+   TEXT APPEAR
+   ========================================= */
+
+.show-text .final-diwali-text {
+
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+
+    transition:
+        0.8s
+        cubic-bezier(
+            0.2,
+            1.4,
+            0.4,
+            1
+        );
+
+    animation:
+        diwaliGlow
+        2s
+        ease-in-out
+        infinite alternate;
+}
+
+
+@keyframes diwaliGlow {
+
+    from {
+
+        filter:
+            brightness(1);
+
+        text-shadow:
+
+            0 0 5px #ffffff,
+
+            0 0 15px #ffd700,
+
+            0 0 30px #ffb300,
+
+            0 0 55px #ff7a00;
+    }
+
+
+    to {
+
+        filter:
+            brightness(1.35);
+
+        text-shadow:
+
+            0 0 10px #ffffff,
+
+            0 0 25px #fff000,
+
+            0 0 45px #ffd000,
+
+            0 0 75px #ff7a00,
+
+            0 0 110px #ff4500;
+    }
+
+}
+
+/* =========================================
+   BACKGROUND FIREWORKS
+   ========================================= */
+
+#backgroundFireworksCanvas {
+    position: absolute !important;
+    
+    top: 0 !important;
+    left: 0 !important;
+    
+    width: 100% !important;
+    height: 100% !important;
+    
+    pointer-events: none !important;
+    
+    z-index: 1 !important;
+}
+
+/* =========================================
+   FINAL MOBILE OPTIMIZATION
+   ========================================= */
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    
+    overflow: hidden;
+    
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* सभी screens */
+
+.screen {
+    width: 100vw;
+    height: 100dvh;
+    
+    min-height: 100dvh;
+    
+    overflow: hidden;
+}
+
+
+/* Images मोबाइल से बाहर न जाएं */
+
+.screen img {
+    max-width: 100%;
+}
+
+
+/* Buttons */
+
+button {
+    max-width: 90vw;
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+    
+    .happy-diwali {
+        max-width: 94vw;
+        
+        font-size:
+            clamp(30px, 9vw, 52px);
+        
+        line-height: 1.2;
+        
+        text-align: center;
+    }
+    
+    
+    .final-diwali-text {
+        max-width: 96vw;
+        
+        font-size:
+            clamp(34px, 10vw, 58px);
+        
+        white-space: nowrap;
+    }
+    
+    
+    .final-rocket {
+        transform-origin: center bottom;
+    }
+    
+    
+    .rocket-left {
+        left: 16%;
+    }
+    
+    
+    .rocket-right {
+        right: 16%;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 360px) {
+    
+    .final-diwali-text {
+        font-size: 32px;
+    }
+    
+    
+    .happy-diwali {
+        font-size: 30px;
+    }
+}
+
+
+/* =========================================
+   MOBILE HEIGHT SAFETY
+   ========================================= */
+
+@media (max-height: 650px) {
+    
+    .final-diwali-text {
+        top: 38%;
+    }
+    
+    
+    .happy-diwali {
+        transform:
+            translateY(-5px);
+    }
+}
+
+
+/* =========================================
+   REDUCE UNNECESSARY ANIMATION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    
+    * {
+        animation-duration: 0.01ms !important;
+        
+        animation-iteration-count: 1 !important;
+        
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ================================
+   STEP 5 — FINAL INTERACTION POLISH
+================================ */
+
+/* Tap Spark */
+.tap-spark {
+    position: fixed;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 220, 100, 0.95);
+    box-shadow:
+        0 0 6px rgba(255, 220, 100, 0.9),
+        0 0 14px rgba(255, 170, 40, 0.7);
+    pointer-events: none;
+    z-index: 9999;
+    animation: tapSparkAnimation 650ms ease-out forwards;
+}
+
+@keyframes tapSparkAnimation {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+    }
+}
+
+
+/* Final Screen Floating Glow */
+#finalScene::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 3;
+    
+    background:
+        radial-gradient(circle at 20% 30%, rgba(255, 220, 100, 0.12), transparent 12%),
+        radial-gradient(circle at 75% 25%, rgba(255, 190, 60, 0.10), transparent 12%),
+        radial-gradient(circle at 30% 75%, rgba(255, 230, 120, 0.08), transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(255, 170, 40, 0.10), transparent 12%);
+    
+    animation: floatingGlow 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatingGlow {
+    from {
+        opacity: 0.45;
+        transform: scale(1);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+
+/* Diya Scene Extra Glow */
+#diyaScene {
+    animation: diyaSceneGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes diyaSceneGlow {
+    from {
+        filter: brightness(1);
+    }
+    
+    to {
+        filter: brightness(1.06);
+    }
+}
+
+
+/* Smooth Touch */
+button,
+.screen {
+    -webkit-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+
+/* Small Screen Adjustment */
+@media (max-width: 480px) {
+    
+    .tap-spark {
+        width: 6px;
+        height: 6px;
+    }
+    
+    #finalScene::before {
+        background:
+            radial-gradient(circle at 25% 30%, rgba(255, 220, 100, 0.10), transparent 15%),
+            radial-gradient(circle at 75% 30%, rgba(255, 190, 60, 0.08), transparent 15%),
+            radial-gradient(circle at 50% 75%, rgba(255, 210, 80, 0.08), transparent 14%);
+    }
+}
+
+/* ================================
+   STEP 7 - SHARE GIFT EXPERIENCE
+================================ */
+
+#welcomeScreen {
+    position: relative;
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Large Gift */
+#welcomeScreen .gift-box {
+    transform: scale(1.12);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Gift becomes slightly larger on small screens */
+@media (max-width: 480px) {
+    
+    #welcomeScreen .gift-box {
+        transform: scale(1.18);
+    }
+    
+}
+
+@media (max-width: 360px) {
+    
+    #welcomeScreen .gift-box {
+        transform: scale(1.08);
+    }
+    
+}
+
+/* Clear tap instruction */
+#welcomeScreen::after {
+    content: "🎁 Tap the Gift to Open";
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: clamp(17px, 4vw, 24px);
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    text-shadow:
+        0 0 8px rgba(255, 210, 80, .9),
+        0 0 18px rgba(255, 150, 40, .7);
+    animation: giftInstructionGlow 1.8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+@keyframes giftInstructionGlow {
+    
+    from {
+        opacity: .65;
+        transform: translateX(-50%) scale(.98);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.04);
+    }
+    
+}
+
+/* ================================
+   STEP 7 - SHARE BUTTON
+================================ */
+
+.share-button {
+    position: relative;
+    z-index: 20;
+    
+    margin-top: 18px;
+    padding: 13px 24px;
+    
+    border: none;
+    border-radius: 30px;
+    
+    background: linear-gradient(135deg, #ffb300, #ff7a00);
+    color: white;
+    
+    font-size: 17px;
+    font-weight: 700;
+    
+    cursor: pointer;
+    touch-action: manipulation;
+    
+    box-shadow:
+        0 0 10px rgba(255, 190, 60, .7),
+        0 0 25px rgba(255, 130, 30, .4);
+    
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.share-button:active {
+    transform: scale(.94);
+}
+
+@media (max-width: 480px) {
+    
+    .share-button {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+}
